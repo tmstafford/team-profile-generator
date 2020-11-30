@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateSite = require('./src/generate-site');
 
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
@@ -52,7 +53,7 @@ function addMember() {
         if (newMember) {
             memberInfo();
         } else {
-            // function to end HTML
+            generateHTML(teamArray);
         }
     })
 };
@@ -112,6 +113,36 @@ function memberInfo() {
             })
         }
     })
-}
+};
+
+// function to generate the HTML (write the file) from the teamArray
+// generated from the user input 
+function generateHTML(teamArray) {
+    const html = generateSite(teamArray);
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/index.html', html, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'File created!'
+            });
+            console.log('Check out the index.html file to see your webpage!');
+        });
+        fs.copyFile('./src/style.css', './dist/style.css', err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'File copied!'
+            });
+            console.log('stylesheet copied!');
+        });
+    });
+};
 
 promptManager();

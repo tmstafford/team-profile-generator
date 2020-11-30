@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: aliceblue;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+header h1 {
+    align-self: center;
+}

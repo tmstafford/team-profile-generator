@@ -7,15 +7,17 @@ function generateSite(data) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
-        <title>Team Profile</title>
+        <title>Team Profiles</title>
     </head>
     <body>
         <header>
-            <h1>My Team</h1>
+            <h1>Team Profiles <i class="fas fa-id-card"></i></h1>
         </header>
         <div class="container pt-5 justify-content-center">
-            <div class="row">
+            <div class="row justify-content-center">
                 ${generateCard(data)}
         </div>
     </div>
@@ -41,15 +43,16 @@ function generateCard(data) {
 
 function managerCard(employee) {
     return `
-        <div class="col p-3">
+        <div class="col-auto mb-3 p-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">${employee.name}</h5>
                     <p class="card-text">Manager</p>
+                    <span><i class="fas fa-user"></i></span>
                 </div>
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush bg-light">
                     <li class="list-group-item">ID: ${employee.id}</li>
-                    <li class="list-group-item">Email: ${employee.email}</li>
+                    <li class="list-group-item">Email: <a href="mailto: ${employee.email}">${employee.email}</a></li>
                     <li class="list-group-item">Office Number: ${employee.officeNumber}</li>
                 </ul>
             </div>
@@ -59,16 +62,17 @@ function managerCard(employee) {
 
 function engineerCard(employee) {
     return `
-        <div class="col p-3">
+        <div class="col-auto mb-3 p-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">${employee.name}</h5>
                     <p class="card-text">Engineer</p>
+                    <span><i class="fas fa-user"></i></span>
                 </div>
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush bg-light">
                     <li class="list-group-item">ID: ${employee.id}</li>
-                    <li class="list-group-item">Email: ${employee.email}</li>
-                    <li class="list-group-item">GitHub: ${employee.github}</li>
+                    <li class="list-group-item">Email: <a href="mailto: ${employee.email}">${employee.email}</a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/${employee.github}" target="_blank">${employee.github}</a></li>
                 </ul>
             </div>
         </div>
@@ -77,15 +81,16 @@ function engineerCard(employee) {
 
 function internCard(employee) {
     return `
-        <div class="col p-3">
+        <div class="col-auto mb-3 p-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">${employee.name}</h5>
                     <p class="card-text">Intern</p>
+                    <span><i class="fas fa-user"></i></span>
                 </div>
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush bg-light">
                     <li class="list-group-item">ID: ${employee.id}</li>
-                    <li class="list-group-item">Email: ${employee.email}</li>
+                    <li class="list-group-item">Email: <a href="mailto: ${employee.email}">${employee.email}</a></li>
                     <li class="list-group-item">School: ${employee.school}</li>
                 </ul>
             </div>

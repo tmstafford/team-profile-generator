@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Overpass', sans-serif;
+}
 
 header {
     background-color: aliceblue;
@@ -12,4 +15,30 @@ header {
 }
 header h1 {
     align-self: center;
+    font-size: 3rem;
+    font-weight: 700;
 }
+h5 {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card {
+    width: 18rem;
+    height: 18rem;
+}
+.card-body {
+    text-align: center;
+}
+.card-text {
+    font-style: italic;
+}
+.list-group-item {
+    background-color: #f8f9fa !important;
+}
+
+

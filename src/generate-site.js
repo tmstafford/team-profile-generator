@@ -44,13 +44,13 @@ function generateCard(data) {
 function managerCard(employee) {
     return `
         <div class="col-auto mb-3 p-3">
-            <div class="card">
+            <div class="card shadow manager-border">
                 <div class="card-body">
                     <h5 class="card-title">${employee.name}</h5>
-                    <p class="card-text">Manager</p>
+                    <p class="card-text manager">Manager</p>
                     <span><i class="fas fa-user"></i></span>
                 </div>
-                <ul class="list-group list-group-flush bg-light">
+                <ul class="list-group list-group-flush bg-light managerA">
                     <li class="list-group-item">ID: ${employee.id}</li>
                     <li class="list-group-item">Email: <a href="mailto: ${employee.email}">${employee.email}</a></li>
                     <li class="list-group-item">Office Number: ${employee.officeNumber}</li>
@@ -63,13 +63,13 @@ function managerCard(employee) {
 function engineerCard(employee) {
     return `
         <div class="col-auto mb-3 p-3">
-            <div class="card">
+            <div class="card shadow eng-border">
                 <div class="card-body">
                     <h5 class="card-title">${employee.name}</h5>
-                    <p class="card-text">Engineer</p>
-                    <span><i class="fas fa-user"></i></span>
+                    <p class="card-text engineer">Engineer</p>
+                    <span><i class="fas fa-glasses"></i></span>
                 </div>
-                <ul class="list-group list-group-flush bg-light">
+                <ul class="list-group list-group-flush bg-light engineerA">
                     <li class="list-group-item">ID: ${employee.id}</li>
                     <li class="list-group-item">Email: <a href="mailto: ${employee.email}">${employee.email}</a></li>
                     <li class="list-group-item">GitHub: <a href="https://github.com/${employee.github}" target="_blank">${employee.github}</a></li>
@@ -82,13 +82,13 @@ function engineerCard(employee) {
 function internCard(employee) {
     return `
         <div class="col-auto mb-3 p-3">
-            <div class="card">
+            <div class="card shadow int-border">
                 <div class="card-body">
                     <h5 class="card-title">${employee.name}</h5>
-                    <p class="card-text">Intern</p>
-                    <span><i class="fas fa-user"></i></span>
+                    <p class="card-text intern">Intern</p>
+                    <span><i class="fas fa-graduation-cap"></i></span>
                 </div>
-                <ul class="list-group list-group-flush bg-light">
+                <ul class="list-group list-group-flush bg-light internA">
                     <li class="list-group-item">ID: ${employee.id}</li>
                     <li class="list-group-item">Email: <a href="mailto: ${employee.email}">${employee.email}</a></li>
                     <li class="list-group-item">School: ${employee.school}</li>

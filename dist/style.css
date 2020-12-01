@@ -6,12 +6,20 @@
 body {
     font-family: 'Overpass', sans-serif;
 }
-
+span {
+    font-size: 30px;
+}
+a:hover {
+    background-color: #6c7b8b;
+    color: #fff !important;
+}
 header {
-    background-color: aliceblue;
     height: 150px;
     display: flex;
     justify-content: center;
+    background-color: #bdd4e7;
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+
 }
 header h1 {
     align-self: center;
@@ -29,7 +37,10 @@ h5 {
 }
 .card {
     width: 18rem;
-    height: 18rem;
+    height: 20rem;
+}
+.shadow {
+    box-shadow: 0 7px 30px -10px rgba(13, 79, 139, 0.5);
 }
 .card-body {
     text-align: center;
@@ -39,6 +50,36 @@ h5 {
 }
 .list-group-item {
     background-color: #f8f9fa !important;
+}
+.manager-border {
+    border: 1px solid #0d4f8b;
+}
+.manager {
+    color: #0d4f8b;
+}
+.managerA a {
+    text-decoration: none;
+    color: #0d4f8b;
+}
+.eng-border {
+    border: 1px solid #60affe;
+}
+.engineer {
+    color: #60affe;
+}
+.engineerA a {
+    text-decoration: none;
+    color: #60affe;
+}
+.int-border {
+    border: 1px solid #b0e2ff;
+}
+.intern {
+    color: #b0e2ff;
+}
+.internA a {
+    text-decoration: none;
+    color: #b0e2ff;
 }
 
 

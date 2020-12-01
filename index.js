@@ -36,7 +36,6 @@ function promptManager() {
     .then(function({ name, id, email, officeNumber}) {
         const manager = new Manager(name, id, email, officeNumber);
         teamArray.push(manager);
-        console.log(teamArray);
         addMember();
     })
 };
@@ -94,7 +93,6 @@ function memberInfo() {
             .then(function({ github }) {
                 const engineer = new Engineer(name, id, email, github);
                 teamArray.push(engineer);
-                console.log(teamArray);
                 addMember();
             })
         } else if (role === 'Intern') {
@@ -108,7 +106,6 @@ function memberInfo() {
             .then(function({ school }) {
                 const intern = new Intern(name, id, email, school);
                 teamArray.push(intern);
-                console.log(teamArray);
                 addMember();
             })
         }
@@ -129,7 +126,7 @@ function generateHTML(teamArray) {
                 ok: true,
                 message: 'File created!'
             });
-            console.log('Check out the index.html file to see your webpage!');
+            console.log('Check out the index.html file to see the generated webpage!');
         });
         fs.copyFile('./src/style.css', './dist/style.css', err => {
             if (err) {
@@ -140,7 +137,7 @@ function generateHTML(teamArray) {
                 ok: true,
                 message: 'File copied!'
             });
-            console.log('stylesheet copied!');
+            console.log('File copied!');
         });
     });
 };

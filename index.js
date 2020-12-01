@@ -15,22 +15,54 @@ function promptManager() {
         {
             type: 'input',
             name: 'name',
-            message: "What is the team manager's name?"
+            message: "What is the team manager's name?",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the team manager's name!");
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'id',
-            message: "Enter the team manager's employee ID:"
+            message: "Enter the team manager's employee ID:",
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the team manager's employee ID!");
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
-            message: "Enter the team manager's email address:"
+            message: "Enter the team manager's email address:",
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the team manager's email address!");
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'officeNumber',
-            message: "Enter the team manager's office number:"
+            message: "Enter the team manager's office number:",
+            validate: officeNumberInput => {
+                if (officeNumberInput) {
+                    return true;
+                } else {
+                    console.log("Please enter an office number!");
+                    return false;
+                }
+            }
         }
     ])
     .then(function({ name, id, email, officeNumber}) {
@@ -68,17 +100,41 @@ function memberInfo() {
         {
             type: 'input',
             name: 'name',
-            message: "What is the team member's name?"
+            message: "What is the team member's name?",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the team member's name!");
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'id',
-            message: "Enter the team member's ID:"
+            message: "Enter the team member's ID:",
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the team member's ID!");
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
-            message: "Enter the team member's email address:"
+            message: "Enter the team member's email address:",
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the team member's email address!");
+                    return false;
+                }
+            }
         }
     ])
     .then(function({ role, name, id, email }) {
@@ -87,7 +143,15 @@ function memberInfo() {
                 {
                     type: 'input',
                     name: 'github',
-                    message: "Enter the team member's GitHub Username:"
+                    message: "Enter the team member's GitHub Username:",
+                    validate: githubInput => {
+                        if (githubInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter the engineer's GitHub username!");
+                            return false;
+                        }
+                    }
                 }
             ])
             .then(function({ github }) {
@@ -100,7 +164,15 @@ function memberInfo() {
                 {
                     type: 'input',
                     name: 'school',
-                    message: "Enter the team member's school name:"
+                    message: "Enter the team member's school name:",
+                    validate: schoolInput => {
+                        if (schoolInput) {
+                            return true;
+                        } else {
+                            console.log("Please enter the intern's school name!");
+                            return false;
+                        }
+                    }
                 }
             ])
             .then(function({ school }) {

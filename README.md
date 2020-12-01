@@ -21,6 +21,10 @@ Clone this repository and from the command line, run
       
   Answer all of the prompted questions and when your team is completed, you will see the generated HTML webpage in the dist/ folder! Open the HTML in your browser to see the finished Team Profile webpage complete with CSS styling. 
   
+  ## Tests
+  npm run test- tests for Employee, Manager, Engineer, and Intern:
+  ![npm run test](https://user-images.githubusercontent.com/70179648/100787127-cc642600-33d8-11eb-90bb-750e2ed6d497.gif)
+  
   ## Contributing
   Made by Tatum Stafford
   

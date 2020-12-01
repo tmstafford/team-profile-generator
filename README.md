@@ -5,6 +5,8 @@ This is a command-line application build using Node.js that takes in information
 
 When the user is finished building their team, they answer 'No' when prompted if they want to add more members, and the HTML file is generated and stored in the dist/ folder, along with a CSS stylesheet. Open the HTML file in the browser to see the finished Team Profiles Webpage!
 
+[Click here to watch the full video walk-through of the application](https://drive.google.com/file/d/1a9JQOnhElIGJl2iVHOuwTbHT6asMaKVE/view)
+
 Example generated webpage:
 
 <img width="1390" alt="Screen Shot 2020-12-01 at 1 02 03 PM" src="https://user-images.githubusercontent.com/70179648/100787439-42688d00-33d9-11eb-9dcc-3385216f9386.png">
@@ -13,7 +15,6 @@ User Prompted input:
 
 ![Prompts](https://user-images.githubusercontent.com/70179648/100787327-177e3900-33d9-11eb-9325-7668ce8f3442.gif)
 
-[Click here to watch the full video walk-through of the application](https://drive.google.com/file/d/1a9JQOnhElIGJl2iVHOuwTbHT6asMaKVE/view)
 
 ## Installation
 Clone this repository and from the command line, run

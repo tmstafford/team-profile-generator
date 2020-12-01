@@ -13,6 +13,8 @@ User Prompted input:
 
 ![Prompts](https://user-images.githubusercontent.com/70179648/100787327-177e3900-33d9-11eb-9325-7668ce8f3442.gif)
 
+[Click here to watch the full video walk-through of the application](https://drive.google.com/file/d/1a9JQOnhElIGJl2iVHOuwTbHT6asMaKVE/view)
+
 ## Installation
 Clone this repository and from the command line, run
 
